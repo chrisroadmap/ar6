@@ -1,15 +1,6 @@
 import os
 import urllib.request
-import wquantiles
-
-def weighted_percentile(a, w, q):
-    if isinstance(q, (list, tuple, np.ndarray)):
-        result = []
-        for iq in q:
-            result.append(wquantiles.quantile(a, w, iq))
-    else:
-        result = wquantiles.quantile(a, w, q)
-    return result
+import errno
 
 
 def check_and_download(filepath, url):
@@ -25,3 +16,25 @@ def check_and_download(filepath, url):
     if not os.path.isfile(filepath):
         urllib.request.urlretrieve(url, filepath)
     return
+
+
+def mkdir_p(path):
+    """Checks to see if directory exists, and if not, creates it.
+
+    Inputs
+    ------
+        path : str
+            directory to create
+
+    Raises
+    ------
+        OSError:
+            if directory cannot be created
+    """
+    try:
+        os.makedirs(path)
+    except OSError as exc:
+        if exc.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else:
+            raise

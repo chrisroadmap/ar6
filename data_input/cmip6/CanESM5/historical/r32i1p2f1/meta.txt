@@ -1,0 +1,3 @@
+branch_time_in_parent: 1916250.0
+parent_time_units:     days since 1850-01-01 0:0:0.0
+calendar:              365_day

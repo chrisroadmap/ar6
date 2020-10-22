@@ -2,6 +2,10 @@
 Repository for code for everything I do with AR6
 
 # Installation
+sorry, you're gonna need iris - at least for now.
+get conda then make a new environment. Then
+
+conda install -c conda-forge iris
 pip install -e .
 
 # Order

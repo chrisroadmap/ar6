@@ -27,6 +27,8 @@ REQUIREMENTS = [
     "netCDF4",
     "openscm-twolayermodel",
     "tqdm",
+    "xlrd",
+    "statsmodels",
 ]
 REQUIREMENTS_NOTEBOOKS = ["jupyter"]
 #REQUIREMENTS_TESTS = ["codecov", "coverage", "nbval", "pytest-cov", "pytest>=4.0"]
@@ -95,4 +97,5 @@ setup(
     install_requires=REQUIREMENTS,
     extras_require=REQUIREMENTS_EXTRAS,
     cmdclass=versioneer.get_cmdclass(),
+#    dependency_links=['https://github.com/SciTools/iris/tarball/master#egg=iris-2.4.0']
 )
