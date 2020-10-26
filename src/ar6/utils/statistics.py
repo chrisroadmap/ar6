@@ -25,6 +25,22 @@ def rmse(obs, mod):
 
 
 def weighted_percentile(a, w, q):
+    """Calculate more than one weighted percentile from an array.
+
+    Inputs
+    ------
+    a : np.ndarray
+        array to calculate percentiles over
+    w : np.ndarray
+        array of weights to apply to each member of a
+    q : np.ndarray, list, tuple
+        percentiles to calculate
+
+    Returns
+    -------
+    result : list
+        weighted percentiles corresponding to q
+    """
     if isinstance(q, (list, tuple, np.ndarray)):
         result = []
         for iq in q:
@@ -32,4 +48,3 @@ def weighted_percentile(a, w, q):
     else:
         result = wquantiles.quantile(a, w, q)
     return result
-

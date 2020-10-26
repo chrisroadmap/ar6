@@ -5,6 +5,7 @@ I'm not sure who wrote these originally - come to me to claim a free pint.
 """
 
 import h5py
+import numpy as np
 
 def save_dict_to_hdf5(dic, filename):
     """
