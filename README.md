@@ -2,11 +2,11 @@
 Repository for code for everything I do with AR6
 
 # Installation
-sorry, you're gonna need iris to run the 4xCO2 scraping - at least for now.
-get conda then make a new environment. Then
+clone the repo and then run
 
-    conda install -c conda-forge iris
     pip install -e .
+
+Highly recommend doing this in a virtual environment to not screw up your python installation. Conda works well.
 
 # Order
 - solar forcing
