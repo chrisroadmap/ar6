@@ -1,0 +1,101 @@
+import os.path
+
+from setuptools import find_packages, setup
+from setuptools.command.test import test as TestCommand
+
+import versioneer
+
+PACKAGE_NAME = "ar6"
+AUTHORS = [
+    ("Chris Smith", "smithc@iiasa.ac.uk"),
+]
+URL = "https://github.com/chrisroadmap/ar6"
+
+DESCRIPTION = "AR6-related work"
+README = "README.md"
+
+SOURCE_DIR = "src"
+
+REQUIREMENTS = [
+    "fair>=1.6.1,<2.0.0",
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "pandas",
+    "wquantiles",
+    "h5py",
+    "netCDF4",
+    "openscm-twolayermodel@git+https://github.com/chrisroadmap/openscm-twolayermodel@multiparam",
+    "tqdm",
+    "xlrd",
+    "statsmodels",
+]
+REQUIREMENTS_NOTEBOOKS = ["jupyter"]
+#REQUIREMENTS_TESTS = ["codecov", "coverage", "nbval", "pytest-cov", "pytest>=4.0"]
+#REQUIREMENTS_DOCS = ["sphinx>=1.4", "sphinx_rtd_theme", "sphinx-click"]
+#REQUIREMENTS_DEPLOY = ["twine>=1.11.0", "setuptools>=41.2", "wheel>=0.31.0"]
+REQUIREMENTS_DEV = [
+#    *[
+#        "bandit",
+#        "black==19.10b0",
+#        "black-nb",
+#        "flake8",
+#        "isort>5",
+#        "mypy",
+#        "nbdime",
+#        "pydocstyle",
+#        "pylint>=2.4.4",
+#    ],
+#    *REQUIREMENTS_DEPLOY,
+#    *REQUIREMENTS_DOCS,
+    *REQUIREMENTS_NOTEBOOKS,
+#    *REQUIREMENTS_TESTS,
+]
+
+REQUIREMENTS_EXTRAS = {
+#    "deploy": REQUIREMENTS_DEPLOY,
+#    "dev": REQUIREMENTS_DEV,
+#    "docs": REQUIREMENTS_DOCS,
+    "notebooks": REQUIREMENTS_NOTEBOOKS,
+#    "tests": REQUIREMENTS_TESTS,
+}
+
+# no tests/docs in `src` so don't need exclude
+PACKAGES = find_packages(SOURCE_DIR)
+PACKAGE_DIR = {"": SOURCE_DIR}
+
+# README #
+def readme():
+    with open('README.md') as f:
+        return f.read()
+
+
+setup(
+    name=PACKAGE_NAME,
+    version=versioneer.get_version(),
+    description=DESCRIPTION,
+    long_description=readme(),
+    long_description_content_type="text/x-rst",
+    author=", ".join([author[0] for author in AUTHORS]),
+    author_email=", ".join([author[1] for author in AUTHORS]),
+    url=URL,
+    license="3-Clause BSD License",
+    classifiers=[  # full list at https://pypi.org/pypi?%3Aaction=list_classifiers
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: BSD License",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
+    keywords=["climate", "model"],
+    packages=PACKAGES,
+    package_dir=PACKAGE_DIR,
+#    package_data=PACKAGE_DATA,
+    include_package_data=True,
+    install_requires=REQUIREMENTS,
+    extras_require=REQUIREMENTS_EXTRAS,
+    cmdclass=versioneer.get_cmdclass(),
+#    dependency_links=['https://github.com/SciTools/iris/tarball/master#egg=iris-2.4.0']
+)

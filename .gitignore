@@ -1,3 +1,6 @@
+# Don't commit big datafiles
+data_input_large
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
