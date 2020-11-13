@@ -1,4 +1,5 @@
-# Don't commit big datafiles
+# Don't commit big datafiles or plots
+figures
 data_input_large
 
 # Byte-compiled / optimized / DLL files
