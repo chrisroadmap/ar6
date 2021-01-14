@@ -1,0 +1,18 @@
+This directory includes netcdfs with global-mean LW and SW ERF, IRF and individual rapid adjustments, calculated for each PDRMIP  model using radiative kernels. 
+Each netcdf corresponsds to a single model and the specific radiative kernel set used to produce the results "[model name]_HadGEM2_K[kernelname]..."
+
+
+Variables include 5 values corresponding to the 5 forcing scenarios, in this order:
+1 - CO2x2
+2 - CH4x3
+3 - Solar+2%
+4 - BCx10
+5 - Sulx5
+
+
+A few relevant notes:
+
+-IRFs come from offline calculations by Chris and Gunnar (for CAM4)
+-tas_SW, ta_trop_SW, ta_strat_SW. alb_LW are always set to zero.  Variables are included in netcdf anyways for consistency.
+-When LW or SW IRFs is not available, The value is set to NaN in the netcdf.
+-When the IRFs are NaN, the corresponding cloud adjustments are also set to NaN.
