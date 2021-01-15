@@ -2,6 +2,27 @@
 Gas properties
 """
 
+# Ozone depleting substances
+ods_species = [
+    'CCl4',
+    'CFC11',
+    'CFC113',
+    'CFC114',
+    'CFC115',
+    'CFC12',
+    'CH2Cl2',
+    'CH3Br',
+    'CH3CCl3',
+    'CH3Cl',
+    'CHCl3',
+    'HCFC141b',
+    'HCFC142b',
+    'HCFC22',
+    'Halon1211',
+    'Halon1301',
+    'Halon2402',
+]
+
 # Number of bromine atoms
 br_atoms = {
     'CCl4': 0,
