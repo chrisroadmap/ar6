@@ -1,5 +1,4 @@
 # Don't commit big datafiles or plots
-figures
 data_input_large
 data_output_large
 
