@@ -17,7 +17,7 @@ README = "README.md"
 SOURCE_DIR = "src"
 
 REQUIREMENTS = [
-    "fair>=1.6.1,<2.0.0",
+    "fair==1.6.2",
     "matplotlib",
     "numpy",
     "scipy",
@@ -29,6 +29,7 @@ REQUIREMENTS = [
     "tqdm",
     "xlrd",
     "statsmodels",
+    "openscm-runner",
 ]
 REQUIREMENTS_NOTEBOOKS = ["jupyter"]
 #REQUIREMENTS_TESTS = ["codecov", "coverage", "nbval", "pytest-cov", "pytest>=4.0"]
