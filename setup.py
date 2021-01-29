@@ -25,7 +25,6 @@ REQUIREMENTS = [
     "wquantiles",
     "h5py",
     "netCDF4",
-    "openscm-twolayermodel@git+https://github.com/chrisroadmap/openscm-twolayermodel@multiparam",
     "tqdm",
     "xlrd",
     "statsmodels",
