@@ -8,7 +8,7 @@ import pandas
 from scipy.interpolate import interp1d
 from .constants import *
 
-class ScmDef(object):
+class TwoLayerModel:
     """Defines the two-layer climate model.
 
     Attributes:
