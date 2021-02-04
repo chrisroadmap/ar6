@@ -1,0 +1,5 @@
+Model,Scenario,Region,Variable,Unit,Mip_Era,Activity_Id,1750,1930,1940,1950,1960,1970,1980,1990,2000,2005,2010,2020,2030,2040,2050,2060,2070,2080,2090,2100,2500
+IMAGE,rcp26,World,Emissions|NOx|MAGICC Fossil and Industrial|Aircraft,MtNO2/yr,CMIP5,not_applicable,0,0,0.088,0.19,0.41,0.889,1.335,2.045,2.793,3.162,3.513,4.156,3.598,4.039,4.108,2.664,0.932,0.343,0.335,0.337,0.337
+MiniCAM,rcp45,World,Emissions|NOx|MAGICC Fossil and Industrial|Aircraft,MtNO2/yr,CMIP5,not_applicable,0,0,0.088,0.19,0.41,0.889,1.335,2.045,2.793,2.946,3.111,3.44,4.03,4.615,5.194,5.676,6.123,6.534,7.229,7.923,7.923
+AIM,rcp60,World,Emissions|NOx|MAGICC Fossil and Industrial|Aircraft,MtNO2/yr,CMIP5,not_applicable,0,0,0.088,0.19,0.41,0.889,1.335,2.045,2.793,2.955,3.077,3.395,3.892,4.486,4.886,5.042,4.946,4.565,4.258,3.865,3.865
+MESSAGE,rcp85,World,Emissions|NOx|MAGICC Fossil and Industrial|Aircraft,MtNO2/yr,CMIP5,not_applicable,0,0,0.088,0.19,0.41,0.889,1.335,2.045,2.793,3.139,3.486,4.185,4.937,5.767,6.543,7.679,8.848,9.91,10.938,11.945,11.945
