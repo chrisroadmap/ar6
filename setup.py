@@ -17,7 +17,7 @@ README = "README.md"
 SOURCE_DIR = "src"
 
 REQUIREMENTS = [
-    "fair==1.6.2",
+    "fair==1.6.3",
     "matplotlib",
     "numpy",
     "scipy",
