@@ -24,7 +24,7 @@ REQUIREMENTS = [
     "pandas",
     "wquantiles",
     "h5py",
-    "netCDF4",
+    "netCDF4>=1.5.6",
     "tqdm",
     "xlrd",
     "statsmodels",
