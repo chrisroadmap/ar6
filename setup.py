@@ -28,7 +28,7 @@ REQUIREMENTS = [
     "tqdm",
     "xlrd",
     "statsmodels",
-    "openscm-runner",
+    "openscm-runner==0.5.0",
     "jupyter"
 ]
 
