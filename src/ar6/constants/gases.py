@@ -124,7 +124,10 @@ ghg_to_rcmip_names={
 }
 
 # Hodnebrog et al., 2020: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019RG000691
+# unless stated
 lifetimes = {
+    'CH4':          11.8,  # chapter 6
+    'N2O':          109,   # AR6 SOD
     'HFC-125':      30,
     'HFC-134a':     14,
     'HFC-143a':     51,
