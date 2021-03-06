@@ -1,0 +1,6 @@
+# Metric,RE_err,Chemistry_err,Lifetime_err,CO2_err,C-cycle_err,Fossil_err,IRF_err,Total_err
+       GWP20,    19,     0,     0,    18,     2,     0,     0,    26
+      GWP100,    19,     0,     0,    26,     4,     0,     0,    33
+      GWP500,    19,     0,     0,    29,     5,     0,     0,    35
+       GTP50,    19,     0,     0,    25,     5,     0,     2,    32
+      GTP100,    19,     0,     0,    29,     5,     0,     1,    35
