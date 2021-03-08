@@ -34,6 +34,6 @@ $ cksum GloSSAC_V2.0.nc
 
 ## Credits
 - Glen Harris and Mark Ringer for the two layer climate model in `src/ar6/twolayermodel`, and the CMIP6 tunings
-- Matt Palmer: figure 7.3
+- Matt Palmer: box 7.2 figure 1 and figure 7.3
 - Bill Collins: figure 7.21
 - Piers Forster: figure 7.22
