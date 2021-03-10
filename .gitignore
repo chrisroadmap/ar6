@@ -1,3 +1,6 @@
+# apple
+*.DS_Store 
+
 # Don't commit big datafiles or plots
 data_input_large
 data_output_large
