@@ -51,6 +51,9 @@ In the `contributed` directory is code that I did not produce or co-produce that
 ## Playlist
 I often work listening to music, and every notebook has an associated theme song. Some are related to the contents of the notebook, but most are just a reflection of what I was listening to at the time or what mood I was in. Hopefully you might discover something new.
 
+## Anything broken?
+This notebook was pieced together in stages, over a period of nearly two years, in the face of conflicting interests and changing assessments. It's highly likely that one or two links in the chain are broken. [Please raise an issue](https://github.com/chrisroadmap/ar6/issues) if something isn't working.
+
 ## Credits
 - Glen Harris and Mark Ringer for the two layer climate model in `src/ar6/twolayermodel`, and the CMIP6 tunings
 - Matt Palmer: box 7.2 figure 1 and figure 7.3
@@ -60,4 +63,4 @@ I often work listening to music, and every notebook has an associated theme song
 - Masa Watanabe: figure 7.17 (contributed)
 - Sophie Berger: figure 1, FAQ 7.3 (contributed)
 
-If I forgot you, please drop me a line.
+If I forgot you, please [raise an issue](https://github.com/chrisroadmap/ar6/issues).
