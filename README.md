@@ -30,14 +30,14 @@ Most large input ancillary datasets are automatically downloaded when required i
 #### Glossac v2.0 stratospheric aerosol optical depth time series
 - Obtained from https://asdc.larc.nasa.gov/project/GloSSAC/GloSSAC_2.0 (registration required).
 
-    $ cksum GloSSAC_V2.0.nc
+    $ cksum GloSSAC_V2.0.nc<br>
     938562794 482976764 GloSSAC_V2.0.nc
 
 
 #### eVolv v3 stratospheric optical depth, 500 BCE to 1900 CE
 - Obtained from https://cera-www.dkrz.de/WDCC/ui/cerasearch/entry?acronym=eVolv2k_v3 (registration required).
 
-    $ cksum eVolv2k_v3_EVA_AOD_-500_1900_1.nc
+    $ cksum eVolv2k_v3_EVA_AOD_-500_1900_1.nc<br>
     3663959754 22244500 eVolv2k_v3_EVA_AOD_-500_1900_1.nc
 
 ### Output datasets
@@ -52,7 +52,7 @@ In the `contributed` directory is code that I did not produce or co-produce that
 I often work listening to music, and every notebook has an associated theme song. Some are related to the contents of the notebook, but most are just a reflection of what I was listening to at the time or what mood I was in. Hopefully you might discover something new.
 
 ## Anything broken?
-This notebook was pieced together in stages, over a period of nearly two years, in the face of conflicting interests and changing assessments. It's highly likely that one or two links in the chain are broken. [Please raise an issue](https://github.com/chrisroadmap/ar6/issues) if something isn't working.
+This notebook was pieced together in stages, over a period of nearly two years, in the face of conflicting priorities and changing assessments. It's highly likely that one or two links in the chain are broken. [Please raise an issue](https://github.com/chrisroadmap/ar6/issues) if something isn't working.
 
 ## Credits
 - Glen Harris and Mark Ringer for the two layer climate model in `src/ar6/twolayermodel`, and the CMIP6 tunings
