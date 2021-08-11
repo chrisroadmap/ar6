@@ -1,4 +1,4 @@
-# IPCC AR6 multi-purpose repository
+# IPCC AR6 WG1 Chapter 7 and friends multi-purpose repository
 In this repository is the code, data and figures that I was responsible for creating. Many of the figures and datasets relate to Chapter 7 and the Chapter 7 Supplementary Material, but there are other datasets used in other chapters (e.g. the radiative forcing time series: chapter 2; attribution of future warming: SPM fig. 4). Included here also is the calibration and constraining of the FaIRv1.6.2 simple climate model that will later get used by the IPCC's Working Group 3 to determine the climate response to integrated assessment modelling pathways.
 
 ## Installation
