@@ -62,5 +62,6 @@ This notebook was pieced together in stages, over a period of nearly two years, 
 - Nick Leach: FaIR calibrations for the carbon cycle
 - Masa Watanabe: figure 7.17 (contributed)
 - Sophie Berger: figure 1, FAQ 7.3 (contributed)
+- Brad Hall: greenhouse gas concentrations
 
 If I forgot you, please [raise an issue](https://github.com/chrisroadmap/ar6/issues).
