@@ -1,27 +1,62 @@
 # IPCC AR6 WG1 Chapter 7 and friends multi-purpose repository
-In this repository is the code, data and figures that I was responsible for creating. Many of the figures and datasets relate to Chapter 7 and the Chapter 7 Supplementary Material, but there are other datasets used in other chapters (e.g. the radiative forcing time series: chapter 2; attribution of future warming: SPM fig. 4). Included here also is the calibration and constraining of the FaIRv1.6.2 simple climate model that will later get used by the IPCC's Working Group 3 to determine the climate response to integrated assessment modelling pathways.
 
-## Installation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5211357.svg)](https://doi.org/10.5281/zenodo.5211357)
+
+In this repository is the code, data and figures that I (Chris Smith) was responsible for creating. Many of the figures and datasets relate to Chapter 7 and the Chapter 7 Supplementary Material, but there are other datasets used in other chapters (e.g. the radiative forcing time series: chapter 2; attribution of future warming: SPM fig. 4). Included here also is the calibration and constraining of the FaIRv1.6.2 simple climate model that will later get used by the IPCC's Working Group 3 to determine the climate response to integrated assessment modelling pathways.
+
+## Key output datasets
+
+- Effective radiative forcing: historical 1750-2019 time series [best estimate](data_output/AR6_ERF_1750-2019.csv) | [minor greenhouse gases](data_output/AR6_ERF_minorGHGs_1750-2019.csv) | [5th percentile](data_output/AR6_ERF_1750-2019_pc05.csv) | [95th percentile](data_output/AR6_ERF_1750-2019_pc95.csv)
+  - CMIP6 Shared Socioeconomic Pathways, [1750-2500](https://github.com/chrisroadmap/ar6/tree/main/data_output/SSPs)
+  - CMIP5 Representative Concentration Pathways, [1750-2500](https://github.com/chrisroadmap/ar6/tree/main/data_output/RCPs)
+- Greenhouse gas concentrations: historical 1750-2019 [time series](data_input/observations/LLGHG_history_AR6_v9_for_archive.xlsx?raw=true) (coordinator: Bradley Hall)
+
+For \*.csv files, you can click the "Raw" button to view a plain text version of each file. Alternatively, clone the repo to download all of the files.
+
+## Figure plotting code locations
+
+| Figure        | Code                                 | Authors        |
+| ------------- | ------------------------------------ | -------------- |
+| Box 7.2 Fig 1 | [notebooks/350_chapter7_box7.2_fig1.ipynb](notebooks/350_chapter7_box7.2_fig1.ipynb) | Matthew Palmer, Chris Smith |
+| 7.3           | [notebooks/300_chapter7_fig7.3.ipynb](notebooks/300_chapter7_fig7.3.ipynb)  | Matthew Palmer, Chris Smith |
+| 7.4           | [notebooks/270_chapter7_fig7.4.ipynb](notebooks/270_chapter7_fig7.4.ipynb)  | Chris Smith |
+| 7.5           | [notebooks/060_chapter7_fig7.5_SPM_fig15.ipynb](notebooks/060_chapter7_fig7.5_SPM_fig15.ipynb) | Chris Smith |
+| 7.6           | [notebooks/100_chapter7_fig7.6.ipynb](notebooks/100_chapter7_fig7.6.ipynb) | Chris Smith |
+| 7.7           | [notebooks/220_chapter7_fig7.7.ipynb](notebooks/220_chapter7_fig7.7.ipynb) | Chris Smith |
+| 7.8           | [notebooks/230_chapter7_fig7.8.ipynb](notebooks/230_chapter7_fig7.8.ipynb) | Chris Smith |
+| 7.10          | https://github.com/mzelinka/AR6_figure/blob/v1.0.0/AR6_fbk_violin_plot.py | Mark Zelinka |
+| 7.11          | https://github.com/danlunt1976/ipcc_ar6/blob/master/nonlin/nonlin_fgd.pro | Dan Lunt |
+| 7.13          | https://github.com/danlunt1976/ipcc_ar6/blob/master/patterns/fgd/plot_all_fgd.pro | Dan Lunt |
+| 7.16          | [notebooks/020_chapter7_fig7.16.ipynb](notebooks/020_chapter7_fig7.16.ipynb) | Chris Smith, Masa Watanabe |
+| 7.17          | [contributed/fig7.17/tcr_fgd.f](contributed/fig7.17/tcr_fgd.f) | Masa Watanabe |
+| 7.18          | [notebooks/330_chapter7_fig7.18.ipynb](notebooks/330_chapter7_fig7.18.ipynb) | Piers Forster, Chris Smith |
+| 7.19          | https://github.com/danlunt1976/ipcc_ar6/blob/master/patterns/fgd/plot_all_fgd.pro | Dan Lunt |
+| 7.21          | [notebooks/320_chapter7_fig7.21.ipynb](notebooks/320_chapter7_fig7.21.ipynb) | Bill Collins, Chris Smith |
+| 7.22          | [notebooks/310_chapter7_fig7.22.ipynb](notebooks/310_chapter7_fig7.22.ipynb) | Piers Forster, Michelle Cain, Chris Smith |
+| FAQ 7.3 Fig 1 | [contributed/faq7.3_fig1/Redo_Grose_figure.py](contributed/faq7.3_fig1/Redo_Grose_figure.py) | Sophie Berger |
+| 7.SM.1        | [notebooks/115_chapter7_fig7.SM.1.ipynb](notebooks/115_chapter7_fig7.SM.1.ipynb) | Chris Smith |
+
+## Reproduction
+The figures that I had a hand in are listed above and can be reproduced. Data and figures are produced by the Jupyter Notebooks that live inside the `notebooks` directory.
+
+Every notebook is prefixed by a number. To reproduce all results, the notebooks should be run in numerical order, because some later things depend on earlier things (historical temperature attribution requires a constrained ensemble of the two layer climate model, which relies on the generation of the radiative forcing time series). This being said, most notebooks should run standalone, as input data is provided where the datasets are small enough (see below).
+
+### Installation
 I recommend using a virtual environment such as `venv` or `conda`. This repository was built inside a `conda` environment using `python 3.7`.
 
 First, set up your virtual environment. For example, if using `conda`:
 
-    $ conda create -n ar6 python=3.7
-    $ conda activate ar6
+    $ conda create -n ar6-wg1-ch7 python=3.7
+    $ conda activate ar6-wg1-ch7
 
 Once this is done, clone the repo from GitHub and then run
 
-    (ar6) $ cd ar6
-    (ar6) $ pip install -e .
+    (ar6-wg1-ch7) $ cd ar6  # or if you have used the IPCC-WG1 fork, this will be "Chapter-7"
+    (ar6-wg1-ch7) $ pip install -e .
 
-This will ensure that all required dependencies are installed inside the virtual environment named `ar6`.
+This will ensure that all required dependencies are installed inside the virtual environment named `ar6-wg1-ch7`.
 
-## Reproduction
-All data and figures are produced by the Jupyter Notebooks that live inside the `notebooks` directory.
 
-Every notebook is prefixed by a number. To reproduce all results, the notebooks should be run in numerical order, because some later things depend on earlier things (historical temperature attribution requires a constrained ensemble of the two layer climate model, which relies on the generation of the radiative forcing time series). This being said, most notebooks should run standalone, as input data is provided where the datasets are small enough (see below).
-
-## Data
 ### Input datasets
 Small ancillary datasets that are ingested by the code are included in this repository (`data_input`).
 
@@ -46,7 +81,7 @@ Small output datasets of general interest that are generated by the code, such a
 Large datasets generated by the code (e.g. probablistic time series) are not included in the GitHub repository due to their size. They should be exactly reproducible thanks to fixed random seeds and live in `data_output_large`. The most likely reason for a notebook not running out of the box is that it requires a dataset that lives in `data_output_large` and generated by an earlier notebook.
 
 ## Contributed code
-In the `contributed` directory is code that I did not produce or co-produce that is used in Chapter 7 figures, this being the most appropriate place to put it.
+In the `contributed` directory is code that I did not produce or co-produce that is used in Chapter 7 figures, this being the most appropriate place to put it. A number of Chapter 7 figures are externally hosted on repositories belonging to other authors, which have been linked above.
 
 ## Playlist
 I often work listening to music, and every notebook has an associated theme song. Some are related to the contents of the notebook, but most are just a reflection of what I was listening to at the time or what mood I was in. Hopefully you might discover something new.
@@ -55,13 +90,16 @@ I often work listening to music, and every notebook has an associated theme song
 This notebook was pieced together in stages, over a period of nearly two years, in the face of conflicting priorities and changing assessments. It's highly likely that one or two links in the chain are broken. [Please raise an issue](https://github.com/chrisroadmap/ar6/issues) if something isn't working.
 
 ## Credits
-- Glen Harris and Mark Ringer for the two layer climate model in `src/ar6/twolayermodel`, and the CMIP6 tunings
 - Matt Palmer: box 7.2 figure 1 and figure 7.3
-- Bill Collins: figure 7.21
-- Piers Forster: figure 7.22
-- Nick Leach: FaIR calibrations for the carbon cycle
+- Mark Zelinka: figure 7.10 (externally hosted)
+- Dan Lunt: figures 7.11, 7.13, 7.19 (externally hosted)
 - Masa Watanabe: figure 7.17 (contributed)
+- Piers Forster: figures 7.18 and 7.22
+- Bill Collins: figure 7.21
+- Michelle Cain: figure 7.22
 - Sophie Berger: figure 1, FAQ 7.3 (contributed)
+- Nick Leach: FaIR calibrations for the carbon cycle
+- Glen Harris and Mark Ringer for the two layer climate model in `src/ar6/twolayermodel`, and the CMIP6 tunings
 - Brad Hall: greenhouse gas concentrations
 
 If I forgot you, please [raise an issue](https://github.com/chrisroadmap/ar6/issues).
