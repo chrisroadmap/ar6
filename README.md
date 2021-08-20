@@ -2,7 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5211357.svg)](https://doi.org/10.5281/zenodo.5211357)
 
-In this repository is the code, data and figures that I (Chris Smith) was responsible for creating. Many of the figures and datasets relate to Chapter 7 and the Chapter 7 Supplementary Material, but there are other datasets used in other chapters (e.g. the radiative forcing time series: chapter 2; attribution of future warming: SPM fig. 4). Included here also is the calibration and constraining of the FaIRv1.6.2 simple climate model that will later get used by the IPCC's Working Group 3 to determine the climate response to integrated assessment modelling pathways.
+In this repository is the code, data and figures that I (Chris Smith) was responsible for creating. Many of the figures and datasets relate to Chapter 7 and the Chapter 7 Supplementary Material, but there are other datasets used in other chapters (e.g. the effective radiative forcing time series used in fig. 2.10; attribution of future warming for SPM fig. 4).
+
+Included here also is the calibration and constraining of the FaIRv1.6.2 simple climate model that will later get used by the IPCC's Working Group 3 to determine the climate response to integrated assessment modelling pathways.
 
 ## Key output datasets
 
@@ -24,7 +26,7 @@ For \*.csv files, you can click the "Raw" button to view a plain text version of
 | 7.6           | [notebooks/100_chapter7_fig7.6.ipynb](notebooks/100_chapter7_fig7.6.ipynb) | Chris Smith |
 | 7.7           | [notebooks/220_chapter7_fig7.7.ipynb](notebooks/220_chapter7_fig7.7.ipynb) | Chris Smith |
 | 7.8           | [notebooks/230_chapter7_fig7.8.ipynb](notebooks/230_chapter7_fig7.8.ipynb) | Chris Smith |
-| 7.10          | https://github.com/mzelinka/AR6_figure/blob/v1.0.0/AR6_fbk_violin_plot.py | Mark Zelinka |
+| 7.10          | https://github.com/mzelinka/AR6_figure <br> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5218854.svg)](https://doi.org/10.5281/zenodo.5218854) | Mark Zelinka |
 | 7.11          | https://github.com/danlunt1976/ipcc_ar6/blob/master/nonlin/nonlin_fgd.pro | Dan Lunt |
 | 7.13          | https://github.com/danlunt1976/ipcc_ar6/blob/master/patterns/fgd/plot_all_fgd.pro | Dan Lunt |
 | 7.16          | [notebooks/020_chapter7_fig7.16.ipynb](notebooks/020_chapter7_fig7.16.ipynb) | Chris Smith, Masa Watanabe |
@@ -37,9 +39,9 @@ For \*.csv files, you can click the "Raw" button to view a plain text version of
 | 7.SM.1        | [notebooks/115_chapter7_fig7.SM.1.ipynb](notebooks/115_chapter7_fig7.SM.1.ipynb) | Chris Smith |
 
 ## Reproduction
-The figures that I had a hand in are listed above and can be reproduced. Data and figures are produced by the Jupyter Notebooks that live inside the `notebooks` directory.
+The figures above where I am one of the listed authors can be reproduced. Data and figures are produced by the Jupyter Notebooks that live inside the `notebooks` directory. Also listed are external GitHub repositories and locations within the `contributed` directory where code for figures have been supplied by other authors. These are provided "as-is" and are not guaranteed to be reproducible within this environment. For external GitHub locations, check out the relevant repository READMEs.
 
-Every notebook is prefixed by a number. To reproduce all results, the notebooks should be run in numerical order, because some later things depend on earlier things (historical temperature attribution requires a constrained ensemble of the two layer climate model, which relies on the generation of the radiative forcing time series). This being said, most notebooks should run standalone, as input data is provided where the datasets are small enough (see below).
+Within my processing chain, every notebook is prefixed by a number. To reproduce all results in the chapter, the notebooks should be run in numerical order, because some later things depend on earlier things (historical temperature attribution requires a constrained ensemble of the two layer climate model, which relies on the generation of the radiative forcing time series). This being said, most notebooks should run standalone, as input data is provided where the datasets are small enough (see below).
 
 ### Installation
 I recommend using a virtual environment such as `venv` or `conda`. This repository was built inside a `conda` environment using `python 3.7`.
@@ -58,7 +60,7 @@ This will ensure that all required dependencies are installed inside the virtual
 
 
 ### Input datasets
-Small ancillary datasets that are ingested by the code are included in this repository (`data_input`).
+Small ancillary datasets that are ingested by the code are included in this repository (`data_input`). TODO: [#17](/../../issues/17)
 
 Most large input ancillary datasets are automatically downloaded when required into `data_input_large`, with two exceptions where public APIs were not found to be available. The following files should be downloaded and placed into the `data_input_large` directory:
 
@@ -103,3 +105,17 @@ This notebook was pieced together in stages, over a period of nearly two years, 
 - Brad Hall: greenhouse gas concentrations
 
 If I forgot you, please [raise an issue](https://github.com/chrisroadmap/ar6/issues).
+
+## Suggested citations
+
+**This repository:** Smith C.J., P.M. Forster, S. Berger, W. Collins, B. Hall, D. Lunt, M.D. Palmer, M. Watanabe, M. Cain, G. Harris, N.J. Leach, M. Ringer, M. Zelinka, 2021. Figure and data generation for Chapter 7 of the IPCC's Sixth Assessment Report, Working Group 1 (plus assorted other contributions). Version 1.0. https://doi.org/10.5281/zenodo.5211357
+
+**Figure 7.10:** Zelinka, M., 2021. mzelinka/AR6_figure: Aug 18, 2021 Release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.5218854
+
+Please also consider citing, if appropriate:
+
+**[Chapter 7](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter_07.pdf):** Forster, P., T. Storelvmo, K. Armour, W. Collins, J. L. Dufresne, D. Frame, D. J. Lunt, T. Mauritsen, M. D. Palmer, M. Watanabe, M. Wild, H. Zhang, 2021, The Earth’s Energy Budget, Climate Feedbacks, and Climate Sensitivity. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.
+
+**[Chapter 7 Supplementary Material](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter_07_Supplementary_Material.pdf):** Smith, C., Z.R.J. Nicholls, K. Armour, W. Collins, P. Forster, M. Meinshausen, M. D. Palmer, M. Watanabe, 2021, The Earth’s Energy Budget, Climate Feedbacks, and Climate Sensitivity Supplementary Material. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Available from https://ipcc.ch/static/ar6/wg1.
+
+**[Annex III](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Annex_III.pdf) (GHG concentrations, radiative forcing time series):** IPCC, 2021: Annex III: Tables of historical and projected well-mixed greenhouse gas mixing ratios and effective radiative forcing of all climate forcers [Dentener F. J., B. Hall, C. Smith (eds.)]. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Masson-Delmotte, V., P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu and B. Zhou (eds.)]. Cambridge University Press. In Press.
