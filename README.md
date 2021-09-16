@@ -12,6 +12,7 @@ Included here also is the calibration and constraining of the FaIRv1.6.2 simple 
   - CMIP6 Shared Socioeconomic Pathways, [1750-2500](https://github.com/chrisroadmap/ar6/tree/main/data_output/SSPs)
   - CMIP5 Representative Concentration Pathways, [1750-2500](https://github.com/chrisroadmap/ar6/tree/main/data_output/RCPs)
 - Greenhouse gas concentrations: historical 1750-2019 [time series](data_input/observations/LLGHG_history_AR6_v9_for_archive.xlsx?raw=true) (coordinator: Bradley Hall)
+- [Metrics (e.g. GWP and GTP) for greenhouse gases](data_output/7sm/metrics_supplement_cleaned.csv) (coordinator: Bill Collins)
 
 For \*.csv files, you can click the "Raw" button to view a plain text version of each file. Alternatively, clone the repo to download all of the files.
 
@@ -97,7 +98,7 @@ This notebook was pieced together in stages, over a period of nearly two years, 
 - Dan Lunt: figures 7.11, 7.13, 7.19 (externally hosted)
 - Masa Watanabe: figure 7.17 (contributed)
 - Piers Forster: figures 7.18 and 7.22
-- Bill Collins: figure 7.21
+- Bill Collins: figure 7.21, greenhouse gas metrics
 - Michelle Cain: figure 7.22
 - Sophie Berger: figure 1, FAQ 7.3 (contributed)
 - Nick Leach: FaIR calibrations for the carbon cycle
