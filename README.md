@@ -13,6 +13,7 @@ Included here also is the calibration and constraining of the FaIRv1.6.2 simple 
   - CMIP5 Representative Concentration Pathways, [1750-2500](https://github.com/chrisroadmap/ar6/tree/main/data_output/RCPs)
 - Greenhouse gas concentrations: historical 1750-2019 [time series](data_input/observations/LLGHG_history_AR6_v9_for_archive.xlsx?raw=true) (coordinator: Bradley Hall)
 - [Metrics (e.g. GWP and GTP) for greenhouse gases](data_output/7sm/metrics_supplement_cleaned.csv) (coordinator: Bill Collins). **NOTE** Table 7.SM.7 has incorrect values for CFC-11 and CFC-12, and occasionally rounding errors differ in the third significant figure for AWGP and AGTP compared to Table 7.SM.7.
+- [Calibrated, constrained parameter set for running FaIR](https://doi.org/10.5281/zenodo.5513022) that is consistent with the AR6 Working Group 1 assessment [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5513022.svg)](https://doi.org/10.5281/zenodo.5513022)
 
 For \*.csv files, you can click the "Raw" button to view a plain text version of each file. Alternatively, clone the repo to download all of the files.
 
